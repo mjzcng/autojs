@@ -1,4 +1,5 @@
 auto.waitFor();
+log("到这里了 11111111111");
 var Maid = require("./common/Maid.js");
 var maid = new Maid("com.smzdm.client.android");
 var Unlock = require("./common/Unlock.js");
@@ -7,18 +8,17 @@ maid.before();
 unlock.unlock();
 maid.sleep(2);
 
-maid.kill();
-maid.sleep(2);
-maid.launchActivity("com.smzdm.client.android.activity.HomeActivity");
-maid.sleep(5);
+// maid.kill();
+// maid.sleep(2);
+maid.launch();
+maid.sleep(1);
 if (id("iv_content_cancel").exists()) {
     maid.clickIdCenter("iv_content_cancel"); //app更新弹出框
     maid.sleep(1);
 }
-
-maid.clickTextCenter("我的"); //进入我的页面按钮
-maid.sleep(4);
-maid.clickTextCenter("签到"); //签到按钮
-maid.sleep(2);
-maid.kill();
-maid.after();
+maid.clickIdCenter("tab_usercenter"); 
+maid.sleep(5);
+maid.clickIdCenter("tv_login_sign");
+maid.sleep(3);
+maid.exit()
+maid.after()

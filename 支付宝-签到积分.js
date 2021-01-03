@@ -8,9 +8,9 @@ unlock.unlock();
 maid.sleep(2);
 
 
-maid.kill();
-maid.sleep(2);
-maid.launchActivity("com.eg.android.AlipayGphone.AlipayLogin");
+// maid.kill();
+// maid.sleep(2);
+maid.launch();
 maid.sleep(5);
 if (id("update_cancel_tv").exists()) { // 关闭更新弹窗
     maid.clickIdCenter("update_cancel_tv");
@@ -18,18 +18,19 @@ if (id("update_cancel_tv").exists()) { // 关闭更新弹窗
 }
 maid.clickTextCenter("我的");
 maid.sleep(4);
-maid.clickTextCenter("支付宝会员");
+maid.clickSelectorCenter(className("android.view.ViewGroup").depth(14).clickable(true));
 maid.sleep(4);
 if (desc("弹屏").exists()) {
     maid.clickDescCenter("关闭"); // 支付宝会员日弹窗
     maid.sleep(1);
 }
-maid.clickDescCenter("领积分");
+maid.clickTextCenter("每日赚积分");
 maid.sleep(4);
 while (desc("点击领取").exists()) {
     maid.clickDescCenter("点击领取");
     maid.sleep(6);
 }
 
-maid.kill();
+maid.exit();
+// maid.kill();
 maid.after();
