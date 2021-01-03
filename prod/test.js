@@ -1,0 +1,11 @@
+auto.waitFor();
+var Maid = require("Maid.js");
+var maid = new Maid("com.taobao.trip");
+var Unlock = require("Unlock.js");
+var unlock = new Unlock();
+maid.before(true);
+unlock.unlock();
+maid.sleep(1);
+maid.killall();
+maid.sleep(1);
+maid.after();
