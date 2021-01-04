@@ -172,8 +172,8 @@ function Maid(packageName) {
         const WIDTH = Math.min(device.width, device.height);
         const HEIGHT = Math.max(device.width, device.height);
         // setScreenMetrics(WIDTH, HEIGHT);
-        if (!ignoreSleep)
-            this.sleep(random() * 10); //随机睡眠[0-10]秒, 使签到\打卡时间不固定
+        // if (!ignoreSleep)
+        //     this.sleep(random() * 10); //随机睡眠[0-10]秒, 使签到\打卡时间不固定
     };
     this.exit = function () {
         back();
