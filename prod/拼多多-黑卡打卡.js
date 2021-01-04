@@ -26,11 +26,11 @@ if (text("去打卡").exists())
     maid.clickTextCenter("去打卡");
 else
     maid.clickSelectorCenter(className("android.widget.Image").text("webp").depth(14));
-maid.sleep(2);
+maid.sleep(5);
 maid.click(204, 500);
-maid.sleep(3);
+maid.sleep(5);
 maid.click(554, 457);
-maid.sleep(3);
+maid.sleep(5);
 maid.click(886, 465);
 maid.sleep(3);
 maid.exit();
