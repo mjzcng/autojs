@@ -12,7 +12,8 @@ maid.launch();
 maid.sleep(6);
 back();
 maid.sleep(1);
-maid.clickCenter(className("android.widget.LinearLayout").depth(9).findOne(2000));
+// maid.clickCenter(className("android.widget.LinearLayout").depth(9).findOne(2000));
+maid.clickIdCenter("b_o");
 maid.sleep(1);
 maid.clickTextCenter("黑卡");
 maid.sleep(2);
@@ -24,14 +25,22 @@ if (tanchuang.exists())
     maid.sleep(1);
 if (text("去打卡").exists())
     maid.clickTextCenter("去打卡");
+else if(text("打卡领会员").exists())
+    maid.clickTextCenter("打卡领会员");
 else
     maid.clickSelectorCenter(className("android.widget.Image").text("webp").depth(14));
 maid.sleep(5);
 maid.click(204, 500);
-maid.sleep(5);
+maid.sleep(4);
+maid.clickTextCenter("开心收下");
+maid.sleep(2);
 maid.click(554, 457);
-maid.sleep(5);
+maid.sleep(4);
+maid.clickTextCenter("开心收下");
+maid.sleep(2);
 maid.click(886, 465);
-maid.sleep(3);
+maid.sleep(4);
+maid.clickTextCenter("开心收下");
+maid.sleep(2);
 maid.exit();
 maid.after();

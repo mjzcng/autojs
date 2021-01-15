@@ -9,7 +9,7 @@ maid.sleep(2);
 maid.killall();
 maid.sleep(2);
 maid.launch();
-maid.sleep(6);
+maid.sleep(10);
 maid.clickTextCenter("我的");
 maid.sleep(2);
 maid.clickTextCenter("注册 / 登录");
@@ -22,6 +22,7 @@ if (id("iv_kfc_image_close").exists()) {
 maid.sleep(1);
 maid.clickIdCenter("iv_user_leader_title_3");
 maid.sleep(3);
-maid.clickTextCenter("立即签到");
+maid.clickTextCenter("今日已签到，明天再来吧！");
 maid.sleep(1);
+maid.exit();
 maid.after();

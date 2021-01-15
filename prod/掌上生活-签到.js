@@ -1,0 +1,31 @@
+auto.waitFor();
+var Maid = require("Maid.js");
+var maid = new Maid("com.cmbchina.ccd.pluto.cmbActivity");
+var Unlock = require("Unlock.js");
+var unlock = new Unlock();
+maid.before();
+unlock.unlock();
+maid.sleep(2);
+maid.killall();
+maid.sleep(2);
+maid.launch();
+maid.sleep(6);
+back();
+maid.sleep(1);
+if (text("取消").exists())
+    maid.clickTextCenter("取消");
+maid.sleep(1);
+maid.clickIdCenter("txt_search_hint_first");
+maid.sleep(1);
+maid.clickTextCenter("签到");
+maid.sleep(2);
+maid.clickTextCenter("每日签到");
+maid.sleep(6);
+gesture(2000, [224, 976], [502, 975], [224, 1324], [224, 1633], [502, 1324], [502, 1633], [865, 1324]);
+maid.sleep(5);
+maid.clickSelectorCenter(className("android.view.View").clickable(true).depth(12))
+maid.sleep(5);
+maid.clickTextCenter("我知道了");
+maid.sleep(2);
+maid.exit();
+maid.after();

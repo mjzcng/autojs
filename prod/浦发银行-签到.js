@@ -16,4 +16,7 @@ maid.clickTextCenter("金豆");
 maid.sleep(2);
 gesture(2000, [244, 899], [559, 889], [244, 1166], [244, 1460], [559, 1166], [559, 1460], [861, 1166]);
 maid.sleep(3);
+maid.clickSelectorCenter(textMatches("连续签到\\d+天"))
+maid.sleep(2);
+maid.exit();
 maid.after();

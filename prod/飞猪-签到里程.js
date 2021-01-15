@@ -23,7 +23,11 @@ var setplusmiles = textMatches("\\+\\d+里程").find();
 setplusmiles.forEach(function(pm){
     maid.sleep(1);
     maid.clickCenter(pm.parent());
-    maid.sleep(1);
+    maid.sleep(5);
+    // 想做个检测等待10秒的判断，不好使
+    if (textMatches("倒计时\\d+秒").exists()) {
+        maid.sleep(11);
+    }
     maid.clickTextCenter("立即领奖");
     maid.sleep(1);
     back();
